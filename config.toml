@@ -1,0 +1,21 @@
+# Importer Configuration.
+
+log-level = "info"
+
+worker-count = 64
+job-count = 100000
+batch = 100
+
+table-sql-dir = "./table-schema"
+ratio-file = "./table-ratio.csv"
+qps = 5000
+
+base = 1
+
+step = 8
+
+[source-db]
+host = "127.0.0.1"
+user = "root"
+password = ""
+port = 3306
