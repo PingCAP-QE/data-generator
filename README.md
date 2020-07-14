@@ -2,7 +2,9 @@
 
 ## 编译方法
 
-在 tidb-tools 项目根目录执行 make data-importer
+```bash
+make
+```
 
 ## 配置文件说明
 
