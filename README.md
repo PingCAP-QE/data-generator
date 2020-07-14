@@ -8,7 +8,7 @@ make
 
 ## 配置文件说明
 
-参考配置文件： [config.toml](./config.toml)
+参考配置文件： [config.toml](./config/config.toml)
 
 配置说明：
 
@@ -25,6 +25,6 @@ make
 
 ## 运行
 
-./bin/data-importer -config ./data-importer/config.toml > log 2&>1 &
+./bin/data-generator -config ./config/config.toml > log 2&>1 &
 
 注意：如果需要多次生成数据，为了防止生成的数据有冲突，可以调整 base 和 step，例如：第一次运行时 base 为 0，step 为 9，第二次运行修改 step 为 8；或者第一次运行时 base 为 0，总共写入了 100 行数据，第二次运行时修改 base 为 100。
