@@ -8,7 +8,7 @@ GOBUILD=$(GO) build
 default: data-generator
 
 data-generator:
-	$(GOBUILD) $(GOMOD) -o bin/data-generator *.go
+	$(GOBUILD) $(GOMOD) -o bin/data-generator cmd/*.go
 
 fmt:
 	go fmt ./...

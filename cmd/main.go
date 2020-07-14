@@ -27,7 +27,7 @@ import (
 	"github.com/jszwec/csvutil"
 	"github.com/pingcap/errors"
 	"github.com/pingcap/log"
-	"github.com/pingcap/tidb-tools/pkg/dbutil"
+	"github.com/chaos-mesh/data-generator/pkg"
 )
 
 func main() {
@@ -45,12 +45,12 @@ func main() {
 	defaultStep = cfg.Step
 	minInt64 = cfg.Base
 
-	sourceDB, err := dbutil.OpenDB(cfg.SourceDBCfg)
+	sourceDB, err := pkg.OpenDB(cfg.SourceDBCfg)
 	if err != nil {
 		log.S().Fatal(err)
 	}
 	defer func() {
-		if err := dbutil.CloseDB(sourceDB); err != nil {
+		if err := pkg.CloseDB(sourceDB); err != nil {
 			log.S().Errorf("Failed to close source database: %s\n", err)
 		}
 	}()
