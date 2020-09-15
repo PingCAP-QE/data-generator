@@ -1,4 +1,6 @@
 ## 功能
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fchaos-mesh%2Fdata-generator.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fchaos-mesh%2Fdata-generator?ref=badge_shield)
+
 根据 schema 生成数据
 
 ## 编译方法
@@ -29,3 +31,7 @@ make
 ./bin/data-generator -config ./config/config.toml > log 2>&1 &
 
 注意：如果需要多次生成数据，为了防止生成的数据有冲突，可以调整 base 和 step，例如：第一次运行时 base 为 0，step 为 9，第二次运行修改 step 为 8；或者第一次运行时 base 为 0，总共写入了 100 行数据，第二次运行时修改 base 为 100。
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fchaos-mesh%2Fdata-generator.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fchaos-mesh%2Fdata-generator?ref=badge_large)
